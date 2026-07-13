@@ -5,7 +5,7 @@
 
 > AI Full Stack Developer & UI/UX Designer | Hong Kong
 
-## ðŸš€ Projects Included
+##  Projects Included
 
 | Project | Tech Stack | Status |
 |---------|------------|--------|
@@ -15,18 +15,18 @@
 | **SkillSwap Community** | Next.js 15, Supabase, TypeScript | ðŸš€ Vercel |
 | **SVJ Lee App** | Next.js 15, Prisma, TypeScript | ðŸš€ Vercel |
 
-## ðŸŒ Live Links
+## Live Links
 
 - **Portfolio:** https://Vishwavaran7.github.io/portfolio/
 - **MK Studio:** https://Vishwavaran7.github.io/portfolio/mK%20STUDIO/
 - **MediSense.AI:** https://multi-disease-1multi-disease.onrender.com
 - **Karp Jewellery:** https://karp-jewellery.vercel.app/
 
-## ðŸ“¬ Contact
+##  Contact
 
 - **Email:** vishwavaran7@gmail.com
 - **WhatsApp:** +852 5958 5423
 - **LinkedIn:** linkedin.com/in/vishwavaran
 
 ---
-Built with â¤ï¸ by Vishwavaran V
+Built with ¸ by Vishwavaran V
