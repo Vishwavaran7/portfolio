@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+.next/
+.env.local
+.env
+
+# OS files
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Large binaries
+*.exe
+*.msi
+*.pdf
+*.docx
+~$*
+
+# Misc
+*.lnk
