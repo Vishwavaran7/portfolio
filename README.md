@@ -1,4 +1,4 @@
-﻿# Vishwavaran V â€” Portfolio
+﻿# Vishwavaran V ” Portfolio
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-00e5ff?style=flat-square&logo=vercel)](https://Vishwavaran7.github.io/portfolio/)
 [![GitHub](https://img.shields.io/badge/GitHub-Vishwavaran7-7c3aed?style=flat-square&logo=github)](https://github.com/Vishwavaran7)
