@@ -1,5 +1,6 @@
 # SVJ Corporate Directory — Enterprise Portal
 
+[![SVJ Directory Live](https://img.shields.io/badge/SVJ%20Directory-Live-D4AF37?style=for-the-badge&logo=githubpages&logoColor=white)](https://Vishwavaran7.github.io/portfolio/SVJ/SVJ%20LEE.html)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-7c3aed?style=for-the-badge&logo=github)](https://github.com/Vishwavaran7/portfolio/tree/main/SVJ)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
