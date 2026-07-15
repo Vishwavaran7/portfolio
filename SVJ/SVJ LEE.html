@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SVJ LEE ASIA CORPORATE CONSULTANTS LIMITED</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&family=Noto+Sans+HK:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-color: #020817;
+  --gold: #D4AF37;
+  --gold-glow: rgba(212, 175, 55, 0.4);
+  --text-primary: #F5F5F7;
+  --text-secondary: rgba(245, 245, 247, 0.6);
+  --glass: rgba(15, 23, 42, 0.8);
+  --border: rgba(212, 175, 55, 0.2);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-color);
+  font-family: 'Inter', 'Noto Sans HK', sans-serif;
+  color: var(--text-primary);
+}
+
+.bg {
+  position: fixed; inset: 0; z-index: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(21, 35, 65, 0.8) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(10, 20, 45, 0.8) 0%, transparent 50%),
+    var(--bg-color);
+}
+
+.screen {
+  position: relative; z-index: 1;
+  width: 100vw; height: 100vh;
+  display: flex; flex-direction: column;
+}
+
+/* ── HEADER ── */
+.header {
+  flex-shrink: 0;
+  padding: 15px 40px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo-container {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 10px var(--gold-glow));
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.co-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8vw;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #D4AF37, #F2D57E, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.zh-title {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 1.3vw;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 12px;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.tagline {
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.location-tag {
+  font-size: 0.75vw;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.search-box {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: var(--gold);
+  font-size: 0.7vw;
+  width: 180px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold);
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+.compliance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.65vw;
+  color: var(--gold);
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--gold);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.services-tag {
+  font-size: 0.7vw;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  margin-top: 6px;
+  opacity: 0.8;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 6px 0;
+}
+
+/* ── COLUMNS ── */
+.cols-area {
+  flex: 1;
+  display: flex;
+  padding: 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Removed overlay gradients to ensure all company cards at the top and bottom are fully visible */
+
+.col-box {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 10px;
+}
+
+.col-inner {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+}
+
+.page-layer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 10px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.page-layer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.co {
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition: transform 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Highlight effect styles removed as requested */
+
+.co-en {
+  display: block;
+  font-size: 0.85vw;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  line-height: 1.1;
+}
+
+.co-zh {
+  display: block;
+  font-size: 0.7vw;
+  color: var(--gold);
+  opacity: 0.8;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* ── FOOTER ── */
+.footer {
+  flex-shrink: 0;
+  padding: 5px 60px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.f-clock {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4vw;
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.f-stats {
+  font-size: 0.9vw;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+.f-stats strong {
+  color: var(--gold);
+  font-size: 1.1vw;
+}
+
+.gold-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<div class="screen">
+  <div class="header">
+    <div class="header-left">
+      <div class="logo-container">
+        <svg class="logo-svg" viewBox="0 0 100 100">
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#D4AF37" />
+              <stop offset="50%" style="stop-color:#F2D57E" />
+              <stop offset="100%" style="stop-color:#D4AF37" />
+            </linearGradient>
+            <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0A192F" />
+              <stop offset="100%" style="stop-color:#172A45" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#circleGrad)" stroke="url(#goldGrad)" stroke-width="1"/>
+          <path d="M20,50 Q40,30 60,50 T100,50" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6" />
+          <text x="50%" y="58%" text-anchor="middle" font-family="Playfair Display, serif" font-weight="900" font-size="28" fill="url(#goldGrad)">SVJ</text>
+        </svg>
+      </div>
+      <div class="titles">
+        <div class="co-title">SVJ Lee Asia Corporate Consultants Limited</div>
+        <div class="zh-title">云&nbsp;&nbsp;萊&nbsp;&nbsp;諮&nbsp;&nbsp;詢&nbsp;&nbsp;有&nbsp;&nbsp;限&nbsp;&nbsp;公&nbsp;&nbsp;司</div>
+        <div class="header-line"></div>
+        <div class="services-tag">- COMPANY SECRETARIAL AND CORPORATE ADVISORY SERVICES</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="tagline">Member Companies Directory</div>
+      <div class="location-tag">HONG KONG · GLOBAL NETWORK</div>
+      <div class="f-clock" id="clock" style="margin-top: 10px;">
+        <div id="clock-time"></div>
+        <div id="clock-ampm" style="font-size: 0.9vw; margin-top: 2px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols-area">
+    <div class="col-box">
+      <div class="col-inner" id="col-l"></div>
+    </div>
+    <div class="col-box">
+      <div class="col-inner" id="col-m"></div>
+    </div>
+    <div class="col-box">
+      <div class="col-inner" id="col-r"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="gold-line" style="width: 100%;"></div>
+  </div>
+</div>
+
+<script>
+var companies = [
+  {en:"786 Autos Co Limited",zh:""},
+  {en:"Affinity Interglobal Limited",zh:""},
+  {en:"Aiecat Hong Kong Technology Co., Limited",zh:"艾爾貓香港科技有限公司"},
+  {en:"Ainnotek Limited",zh:"艾絡特有限公司"},
+  {en:"Al Andalus United Company Limited",zh:""},
+  {en:"ALAYNA CORPORATION LIMITED",zh:""},
+  {en:"Aleph Bunglee HK Limited",zh:""},
+  {en:"ALL REAL LIMITED",zh:"真明有限公司"},
+  {en:"ALPHA & OMEGA HK LIMITED",zh:""},
+  {en:"ALPHA BRIDGE INTERNATIONAL HK LIMITED",zh:""},
+  {en:"ALTURA TRANSPORTS HK LIMITED",zh:""},
+  {en:"AMAZING PRODUCTS INTERNATIONAL LIMITED",zh:""},
+  {en:"ANGEL SKY Limited",zh:""},
+  {en:"Aniya Consulting Service Limited",zh:"艾尼雅咨詢服務有限公司"},
+  {en:"ANSUN MULTITECH HK LIMITED",zh:""},
+  {en:"AQUA STAR FOOD INTERNATIONAL LIMITED",zh:"亞科實達食品有限公司"},
+  {en:"ARISTA IMPEX CO., LIMITED",zh:""},
+  {en:"ASIAGLIDE LOGISTICS HK LIMITED",zh:""},
+  {en:"Aspire Products HK Limited",zh:""},
+  {en:"ASTEC CARZ EXPORTER HK LIMITED",zh:""},
+  {en:"AV TELECOM LIMITED",zh:""},
+  {en:"AWAN LIMITED",zh:""},
+  {en:"Bailin Investment Consulting Co., Limited",zh:"柏霖投資咨詢有限公司"},
+  {en:"BCTM Hong Kong Limited",zh:"香港澤寶貿易有限公司"},
+  {en:"BEACH COMB TRADING LIMITED",zh:""},
+  {en:"BEST FREIGHT SERVICE LIMITED",zh:""},
+  {en:"BHADGAUN IMPORT AND EXPORT Limited",zh:""},
+  {en:"Billions Moon Trading Co., Limited",zh:"萬月貿易有限公司"},
+  {en:"Bloom & Gather Limited",zh:"聚合科技有限公司"},
+  {en:"Blooming Sky INTERNATIONAL LIMITED",zh:""},
+  {en:"BLUE SHINE HK LIMITED",zh:""},
+  {en:"BOP GLOBAL CO., LIMITED",zh:""},
+  {en:"BOP TRADE CO., LIMITED",zh:"波譜貿易有限公司"},
+  {en:"BRICS Limited",zh:""},
+  {en:"BRIGHTER FUTURE CHARITABLE FOUNDATION LIMITED",zh:"錦繡前程慈善基金有限公司.. (担保有限公司12月31年結)"},
+  {en:"BRILLIANT COMMODITIES TRADING COMPANY LIMITED",zh:""},
+  {en:"BUDHVALLEY WORLDWIDE HK LIMITED",zh:""},
+  {en:"BUY JEWELS LIMITED",zh:""},
+  {en:"CAJ FRANCE TECHNOLOGY CO., LIMITED",zh:""},
+  {en:"Canaan Technology Hong Kong Limited",zh:"新迦南科技香港有限公司"},
+  {en:"CAREER ARCHITECTS LIMITED",zh:""},
+  {en:"Cheng Xin Limited",zh:"城鑫有限公司"},
+  {en:"CHINA CAPITAL ASSET MANAGEMENT LIMITED",zh:"中國資產投資管理有限公司"},
+  {en:"China Defu Group Holding Co., Limited",zh:"中國德富集團控股有限公司"},
+  {en:"China People Investment Group Co., Limited",zh:""},
+  {en:"CHINA TONGYUAN GROUP CO., LIMITED",zh:"中國通源集團有限公司"},
+  {en:"CHUN HONG METALS PTE LIMITED",zh:""},
+  {en:"Chunju International Hong Kong Co., Limited",zh:"春菊國際香港有限公司"},
+  {en:"CHUZE INTERNATIONAL HK LIMITED",zh:"香港楚澤有限公司"},
+  {en:"CI Industrial Digital Platform Limited",zh:"中伊產業數字平台有限公司"},
+  {en:"CIGGYSPOT TOBACCO TRADING LIMITED",zh:""},
+  {en:"CJ Meridian Ventures Limited",zh:""},
+  {en:"CLEMATIS LOGISTICS HK LIMITED",zh:""},
+  {en:"CLN ENERGY LIMITED",zh:""},
+  {en:"Cloud Smart Supply chain Company Limited",zh:"雲倉智能供應鏈有限公司"},
+  {en:"Cloud Sound International Intelligent Technology Company Limited",zh:"（香港）雲笙國際智能科技有限公司"},
+  {en:"Cloud Supply Chain Co.,Limited",zh:"雲倉供應鏈有限公司"},
+  {en:"Cloud Supplychain Far East Limited",zh:"雲選遠東有限公司"},
+  {en:"Cloudy Middle Fly Trading Limited",zh:"雲中飛貿易有限公司"},
+  {en:"COMMTRADA TRADING LIMITED",zh:""},
+  {en:"CosmoLink Technology Limited",zh:"寰宇星鏈科技有限公司"},
+  {en:"CREATIVE IMPEX LIMITED",zh:""},
+  {en:"Credit Hero Industrial Co., Limited",zh:"信諭實業有限公司"},
+  {en:"CROSS IT SOLUTIONS LIMITED",zh:""},
+  {en:"CrossLink International Trading Limited",zh:"跨連國際貿易有限公司"},
+  {en:"Crystal Vector Limited",zh:"水晶矢量有限公司"},
+  {en:"DARUI TECHNOLOGY HK CO., LIMITED",zh:"達瑞科技香港有限公司"},
+  {en:"DAYTONE LOGISTICS CO LIMITED",zh:""},
+  {en:"DDS Holding Limited",zh:""},
+  {en:"DEEP X CO ., LIMITED",zh:"深埃克斯有限公司"},
+  {en:"DELTA GREEN ASIA LIMITED",zh:""},
+  {en:"DELTA INTERNATIONAL HK TRADING LIMITED",zh:""},
+  {en:"Dhimatrix Trade HK Limited",zh:""},
+  {en:"DI GUO TRADING LIMITED",zh:"香港滴果商貿有限公司"},
+  {en:"Dinero Holding Limited",zh:"迪內羅控股有限公司"},
+  {en:"DINGXING TRADING LIMITED",zh:"鼎興貿易有限公司"},
+  {en:"DONG GUAN HAO LIMITED",zh:""},
+  {en:"DONGGUAN KALE ELECTRONIC CO., LIMITED",zh:"東莞市凱樂電子公司"},
+  {en:"DRAGON BAY LOGISTICS HK LIMITED",zh:""},
+  {en:"DREAM STAR CORP LIMITED",zh:""},
+  {en:"DRO INTERNATIONAL LIMITED",zh:""},
+  {en:"DYNAMIC PORT LOGISTICS HK LIMITED",zh:""},
+  {en:"Eastrise Management Trading Limited",zh:"東升貿易管理有限公司"},
+  {en:"EcoNexus Investment Holdings Co., Limited",zh:"綠擎智聯投資控股有限公司"},
+  {en:"ECOSET TRADING LIMITED",zh:""},
+  {en:"EFFICIENT MARINE LIMITED",zh:""},
+  {en:"Ehi Technology Limited",zh:"香港億駭科技有限公司"},
+  {en:"EKO OIL AND GAS LIMITED",zh:""},
+  {en:"ELITE CUISINE LIMITED",zh:""},
+  {en:"Emerge Holding Limited",zh:"羽化有限公司"},
+  {en:"EON LOGISTICS HK LIMITED",zh:""},
+  {en:"ESSE TECHNOLOGY HONG KONG LIMITED",zh:""},
+  {en:"Ever Glory Trade Company Limited",zh:""},
+  {en:"EXCELLENCE CREATIVE LIMITED",zh:""},
+  {en:"EXPERTS SOURCING HK LIMITED",zh:""},
+  {en:"FAMOUS PROFIT INTERNATIONAL CORPORATION LIMITED",zh:"譽潤國際有限公司"},
+  {en:"Fengju Trading Co., Limited",zh:"豐巨貿易有限公司"},
+  {en:"FIRST GENERATION INT'L LIMITED",zh:""},
+  {en:"FLYFISH Technology Hong Kong Co., Limited",zh:""},
+  {en:"FonsWise Limited",zh:"豐匯諮詢有限公司"},
+  {en:"FOOT FASHION HK LIMITED",zh:"足尚國際貿易有限公司"},
+  {en:"FOREST BRIGHT TRADING LIMITED",zh:"森澤貿易有限公司"},
+  {en:"FORWARD FOCUS TRADING LIMITED",zh:""},
+  {en:"FULL BRIGHT INDUSTRIAL LIMITED",zh:"富光暉實業有限公司"},
+  {en:"GAIN CITY ENTERPRISES LIMITED",zh:"億城企業有限公司"},
+  {en:"Galaxy impex hk LIMITED",zh:""},
+  {en:"GALLEON INTERNATIONAL HONG KONG LIMITED",zh:"加隆國際香港有限公司"},
+  {en:"GANGYE GROUP CHINA CO., LIMITED",zh:"岡野集團(中國)有限公司"},
+  {en:"GAOTIAN INTERNATIONAL HONG KONG CO., LIMITED",zh:"高天（國際）香港有限公司"},
+  {en:"GD Investment Group Limited",zh:""},
+  {en:"GEN Z TRADING PRIVATE LIMITED",zh:""},
+  {en:"GENEXX INTERNATIONAL LIMITED",zh:""},
+  {en:"GLOBAL COMMERCE MARKETING LIMITED",zh:""},
+  {en:"GLOBAL CRATE HK LIMITED",zh:""},
+  {en:"GLOBAL SOURCE ASIA PACIFIC LIMITED",zh:""},
+  {en:"Global Source Investment Limited",zh:"源全投資有限公司"},
+  {en:"GLOBAL SOURCES HK LIMITED",zh:""},
+  {en:"GLOBAL TOP LOGISTICS",zh:""},
+  {en:"GLOBAL TRADE PRIVATE LIMITED",zh:""},
+  {en:"GLOBAL VISION TRADING HK LIMITED",zh:""},
+  {en:"Glowing Han Culture Company Limited",zh:"明端文化有限公司"},
+  {en:"Gold Orange Hong Kong Limited",zh:"金橙子（香港）有限公司"},
+  {en:"GOLDEN BRIDGE INTERNATIONAL CONSULTING CO., LIMITED",zh:"金橋國際咨詢有限公司"},
+  {en:"Golden Jade Trading Limited",zh:"聚恆鑫國際實業有限公司"},
+  {en:"GOLDEN KEYS DEVELOPMENT LIMITED",zh:"金匙發展有限公司"},
+  {en:"GOOD HOPE TRADING LIMITED",zh:""},
+  {en:"GRACE LUCKY LIMITED",zh:"逸樂有限公司"},
+  {en:"Grand Horizon International Investment Limited",zh:"廣闊天地國際投資有限公司"},
+  {en:"Grand Horizon International Trade Co., Limited",zh:"廣闊天地國際貿易有限公司"},
+  {en:"GREAT SURPLUS LIMITED",zh:""},
+  {en:"GREAT VISION TRADING HK LIMITED",zh:""},
+  {en:"GREEN CROWN LIMITED",zh:""},
+  {en:"Group tech Limited",zh:""},
+  {en:"GUANGZHOU TURKI INTERNATIONAL TRADE CO LIMITED",zh:""},
+  {en:"Hailian Xinda International Trade Co., Limited",zh:"海聯鑫達國際貿易有限公司"},
+  {en:"Haly Trade Company Limited",zh:""},
+  {en:"Hamking Tech International Co., Limited",zh:"瀚晶科技有限公司"},
+  {en:"HAPPY FUTURE TOURISM LIMITED",zh:"樂途旅遊有限公司"},
+  {en:"HARBORLINK LOGISTICS HK LIMITED",zh:""},
+  {en:"HARBOURLINK LOGISTICS HK LIMITED",zh:""},
+  {en:"HARMONY HK LIMITED",zh:"和樂（香港）有限公司"},
+  {en:"HEFONG HONG KONG LIMITED",zh:""},
+  {en:"HERO WORLD HK LIMITED",zh:""},
+  {en:"HEVELOON LIMITED",zh:""},
+  {en:"HIGH PROFIT RESOURCES LIMITED",zh:"高盈利資源有限公司"},
+  {en:"HIGH TECHNOLOGY H.K. LIMITED",zh:""},
+  {en:"HIGH TECHNOLOGY INTERNATIONAL LIMITED fr HIGH TRADING INTERNATIONAL LIMITED",zh:""},
+  {en:"HIGHRISE SHIPPING & LOGISTICS LIMITED",zh:""},
+  {en:"HISO ENTERPRISES LIMITED",zh:""},
+  {en:"HK BAI WAN HUA INTERNATIONAL LIMITED",zh:""},
+  {en:"HK GD Crafts Limited",zh:""},
+  {en:"HK JCY LIMITED 港江春源有限公司",zh:""},
+  {en:"HK SHUNWEI INTERNATIONAL TRADING LIMITED",zh:"香港順為國際貿易有限公司"},
+  {en:"HK SKYFORCE LIMITED",zh:""},
+  {en:"HK TRUE VISION LIMITED",zh:""},
+  {en:"HKAM Engineering Technology Co., Limited",zh:"香港航材工程技術有限公司"},
+  {en:"HLD LOGISTICS CO LIMITED",zh:"海藍達國際物流（香港）有限公司"},
+  {en:"Hommoo Technology Co., Limited",zh:"豪沫科技有限公司"},
+  {en:"Hong Kong Bituo Network Technology Co., Limited",zh:"香港比拓網絡科技有限公司"},
+  {en:"Hong Kong Booming Sunrise Wealth Management Limited",zh:"香港昭榮資產管理有限公司"},
+  {en:"Hong Kong Bright Future Educational Immigration Co., Limited",zh:"香港耀來留學移民諮詢有限公司"},
+  {en:"Hong Kong Bright Future Wealth Management Limited",zh:"香港煜烽資產管理有限公司"},
+  {en:"Hong Kong Chaoxiang Network Technology Co., Limited",zh:"香港朝祥網絡科技有限公司"},
+  {en:"Hong Kong Chen Kai International Limited",zh:"香港陳凱國際有限公司"},
+  {en:"Hong Kong Chen Sheng Bao International Limited",zh:"香港陳生寶國際有限公司"},
+  {en:"Hong Kong Chen Si Yu International Limited",zh:"香港陳思雨國際有限公司"},
+  {en:"Hong Kong Cheng Ming Yuan International Limited",zh:"香港程明圓國際有限公司"},
+  {en:"Hong Kong Cheng Zheng International Limited",zh:"香港程正國際有限公司"},
+  {en:"HONG KONG CHUANGHUI GLOBAL LIMITED",zh:"香港創匯環球有限公司"},
+  {en:"Hong Kong Courage International Trade Co., Limited",zh:"香港勇氣國際貿易有限公司"},
+  {en:"Hong Kong Dai Lin International Limited",zh:"香港代琳國際有限公司"},
+  {en:"Hong Kong Di Jie International Limited",zh:"香港狄傑國際有限公司"},
+  {en:"Hong Kong Di Yi Liang International Limited",zh:"香港狄義亮國際有限公司"},
+  {en:"Hong Kong Dolphin E Commerce Limited",zh:"香港海豚電子商務有限公司"},
+  {en:"Hong Kong Feihao Shipping Limited",zh:"香港飛皓海運有限公司"},
+  {en:"Hong Kong Feng Ru Ai International Limited",zh:"香港馮如愛國際有限公司"},
+  {en:"Hong Kong Hayles Biotechnology Co., Limited",zh:"香港海爾斯生物科技有限公司"},
+  {en:"HONG KONG HENGTAI CULTURE TECHNOLOGY CO., LIMITED",zh:"香港恆泰文化科技有限公司"},
+  {en:"Hong Kong Hong Hui Yun Shu Limited",zh:"香港鴻匯雲樞有限公司"},
+  {en:"Hong Kong Honghai Network Technology Company Limited",zh:"香港鴻海網絡科技有限公司"},
+  {en:"Hong Kong Hu Jie International Limited",zh:"香港胡傑國際有限公司"},
+  {en:"Hong Kong Hu Shuai International Limited",zh:"香港胡帥國際有限公司"},
+  {en:"Hong Kong Hu Zhen International Limited",zh:"香港胡珍國際有限公司"},
+  {en:"Hong Kong Huang Sheng International Limited",zh:"香港黃勝國際有限公司"},
+  {en:"Hong Kong Huang Xian Hua International Limited",zh:"香港黃先華國際有限公司"},
+  {en:"Hong Kong Hung Wai Industrial Co., Limited",zh:"香港鴻威實業有限公司"},
+  {en:"HONG KONG JUN YONG CO., LIMITED",zh:"香港俊永有限公司"},
+  {en:"Hong Kong Li Cai E International Limited",zh:"香港李彩娥國際有限公司"},
+  {en:"Hong Kong Li Peng International Limited",zh:"香港李鵬國際有限公司"},
+  {en:"Hong Kong Li San Ying International Limited",zh:"香港李三英國際有限公司"},
+  {en:"HONG KONG LINKSINCERE LIMITED",zh:"香港聯誠有限公司"},
+  {en:"Hong Kong Liu Tuo International Limited",zh:"香港劉拓國際有限公司"},
+  {en:"Hong Kong Liu Wen Xiang International Limited",zh:"香港劉文祥國際有限公司"},
+  {en:"Hong Kong Liu Xue Yang International Limited",zh:"香港劉學洋國際有限公司"},
+  {en:"Hong Kong Lui Xue Chun International Limited",zh:"香港劉學純國際有限公司"},
+  {en:"Hong Kong Niu Ling Wen International Limited",zh:"香港聶聆聞國際有限公司"},
+  {en:"HONG KONG PORTLINK GLOBAL TRADING LIMITED",zh:"香港港聯環球貿易有限公司"},
+  {en:"Hong Kong Qiqu Network Technology Company Limited",zh:"香港奇趣網絡科技有限公司"},
+  {en:"Hong Kong Rei En International Co., Limited",zh:"香港瑞恩國際有限公司"},
+  {en:"Hong Kong Ruifu Network Technology Company Limited",zh:"香港銳富網絡科技有限公司"},
+  {en:"Hong Kong Season International Education Technology Co., Limited",zh:"香港欣勝國際教育科技有限公司"},
+  {en:"Hong Kong Shikewang Food Catering Management Co., Limited",zh:"香港食客旺食品餐飲管理有限公司"},
+  {en:"HONG KONG SUI YAO TRADING CO LIMITED",zh:"香港穗耀貿易有限公司"},
+  {en:"Hong Kong Wan's Technology Co., Limited",zh:"香港萬氏科技有限公司"},
+  {en:"Hong Kong Xingxuan International Trading Co., Limited",zh:"香港星璇國際貿易有限公司"},
+  {en:"Hong Kong Xinhuiteng Human Resources Co., Limited",zh:"香港鑫輝騰人力資源有限公司"},
+  {en:"Hong Kong Xu Chun Xiu International Limited",zh:"香港徐春秀國際有限公司"},
+  {en:"Hong Kong Xu Dong Ge International Limited",zh:"香港徐東閣國際有限公司"},
+  {en:"Hong Kong Xu Lai He International Limited",zh:"香港徐來和國際有限公司"},
+  {en:"Hong Kong Xu Tian Tian International Limited",zh:"香港徐甜甜國際有限公司"},
+  {en:"Hong Kong Xu Yuan Jie International Limited",zh:"香港徐元傑國際有限公司"},
+  {en:"Hong Kong Xu Zhi Jie International Limited",zh:"香港徐志傑國際有限公司"},
+  {en:"Hong Kong Yang Duo Zhen International Limited",zh:"香港楊多珍國際有限公司"},
+  {en:"Hong Kong Yang Pei International Limited",zh:"香港楊沛國際有限公司"},
+  {en:"Hong Kong Yang Zheng Huai International Limited",zh:"香港楊正懷國際有限公司"},
+  {en:"Hong Kong Yongrun Trading Limited",zh:"香港永潤物資進出口貿易有限公司"},
+  {en:"Hong Kong Yuan Liang Jun International Limited",zh:"香港袁亮軍國際有限公司"},
+  {en:"Hong Kong Yuetuo Network Technology Co., Limited",zh:"香港月拓網絡科技有限公司"},
+  {en:"Hong Kong Zhang Kun International Limited",zh:"香港張坤國際有限公司"},
+  {en:"Hong Kong Zhang Xue International Limited",zh:"香港張學國際有限公司"},
+  {en:"Hong Kong Zhang Yu Fang International Limited",zh:"香港張玉芳國際有限公司"},
+  {en:"Hong Kong Zhang Zhuang International Limited",zh:"香港張壯國際有限公司"},
+  {en:"Hong Kong Zheng Cui Cui International Limited",zh:"香港鄭崔崔國際有限公司"},
+  {en:"Hong Kong Zheng Guo Min International Limited",zh:"香港鄭國民國際有限公司"},
+  {en:"Hong Kong Zheng Jin li International Limited",zh:"香港鄭金利國際有限公司"},
+  {en:"Hong Kong Zheng Jun Bo International Limited",zh:"香港鄭俊波國際有限公司"},
+  {en:"Hong Kong Zheng Pei Pei International Limited",zh:"香港鄭佩佩國際有限公司"},
+  {en:"Hong Kong Zheng Yu International Limited",zh:"香港鄭禹國際有限公司"},
+  {en:"HONG KONG ZHONG YAO TRADING COMPANY LIMITED",zh:"香港中堯貿易有限公司"},
+  {en:"Hong Kong Zhu Hai Xia International Limited",zh:"香港朱海霞國際有限公司"},
+  {en:"Hong Kong Zhu Yan Xia International Limited",zh:"香港朱艷俠國際有限公司"},
+  {en:"HONGKONG BOLLYWOOD MEDIA LIMITED",zh:""},
+  {en:"Hongkong Bollywood Media Limited",zh:"香港寶萊塢傳媒有限公司"},
+  {en:"Hongkong BUNEE Optoelectronic Technology Co., Limited",zh:"香港博霓光電科技有限公司"},
+  {en:"Hongkong Gaopingsheng Technology Co., Limited",zh:"香港高平勝科技有限公司"},
+  {en:"Hongkong Haoyi Technology Co., Limited",zh:"香港豪益科技有限公司"},
+  {en:"Hongkong HeShengyuan Biotechnology Co., Limited",zh:"香港合勝源生物科技有限公司"},
+  {en:"Hongkong Hui Huang Investment Company Limited",zh:"香港暉凰投資有限公司"},
+  {en:"Hongkong Jiangshangli Technology Co., Limited",zh:"香港江上李科技有限公司"},
+  {en:"Hongkong Jinjinda Technology Co., Limited",zh:"香港金金達科技有限公司"},
+  {en:"HONGKONG JOEL INDUSTRIAL CO., LIMITED",zh:"香港喬爾實業有限公司"},
+  {en:"HONGKONG PGEJ FINE JEWELRY & COUTURE INTERNATIONAL CO., LIMITED",zh:"香港卓寶珈高級珠寶服裝國際有限公司"},
+  {en:"HONGKONG SHUNSHUI TRADING CO., LIMITED",zh:"香港舜水貿易有限公司"},
+  {en:"Hongkong Wanduokang Technology Co., Limited",zh:"香港萬多康科技有限公司"},
+  {en:"HONGKONG YANG YU INTERNATIONAL LIMITED",zh:"香港楊玉國際有限公司"},
+  {en:"Hongkong Yuangugu Technology Co., Limited",zh:"香港圓咕咕科技有限公司"},
+  {en:"Hongkong Yuhengg Technology Co., Limited",zh:"香港玉恆科技有限公司"},
+  {en:"Hongkong Yun Chuan Investment Company Limited",zh:"香港雲川投資有限公司"},
+  {en:"Hongkong Yunfeizhan Technology Co., Limited",zh:"香港雲非戰科技有限公司"},
+  {en:"Hongkong Zhengbaixin Technology Co., Limited",zh:"香港正百欣科技有限公司"},
+  {en:"Hongkong Zhouwanting Technology Co., Limited",zh:"香港舟晚亭科技有限公司"},
+  {en:"HONGKONG ZONGCHUANG INTERNATIONAL LIMITED",zh:"香港縱創國際有限公司"},
+  {en:"HONGREAT CHINA LIMITED",zh:""},
+  {en:"Hongtu International Trade Co., Limited",zh:"紅土國際貿易有限公司"},
+  {en:"Hongtu Investment Management Co., Limited",zh:"紅土投資管理有限公司"},
+  {en:"HONK WORLD TRADING LIMITED",zh:""},
+  {en:"Huagang International Trade Hong Kong Co., Limited",zh:"華港國際貿易（香港）有限公司"},
+  {en:"Huajun Asset Management Co., Limited",zh:"華君資產投資管理有限公司"},
+  {en:"HUDGE MARKET HK LIMITED",zh:""},
+  {en:"HUDGE MEDIA HK LIMITED",zh:""},
+  {en:"HUI GUAN CULTURAL CREATIVE LIMITED",zh:"慧觀文化創意有限公司"},
+  {en:"Huida International Trading Co., Limited",zh:"輝達國際貿易有限公司"},
+  {en:"HUIDEFENG E-COMMERCETECHNOLOGY LIMITED",zh:"匯德豐電商科技有限公司"},
+  {en:"HY Data Capital Hongkong Limited",zh:"恆益數據資本(香港)有限公司"},
+  {en:"HY Shipping HongKong Co., Limited",zh:"合一船務（香港）有限公司"},
+  {en:"IDEAL TRADING CORP LIMITED",zh:""},
+  {en:"IDROID ASIA LIMITED",zh:""},
+  {en:"Ilaser Trade Co., Limited",zh:"艾雷澤貿易有限公司"},
+  {en:"Innovatec Technology Limited",zh:"未來派科技有限公司"},
+  {en:"INTERGLOBAL LIMITED",zh:""},
+  {en:"INTERLACED LIMITED",zh:""},
+  {en:"INTERNATIONAL PRODUCTS TRADING LIMITED,",zh:""},
+  {en:"INTERPORT EXPRESS HK LIMITED",zh:""},
+  {en:"Inwin Trade Co.,Limited",zh:"永盈生貿易有限公司"},
+  {en:"IPSUM ENTERPRISES LIMITED",zh:""},
+  {en:"Jay Lee Art Design Limited",zh:""},
+  {en:"JAYLEE COMPANY LIMITED",zh:""},
+  {en:"JCR Corporation Limited",zh:""},
+  {en:"Jinfan Hong Kong International Logistics Co., Limited",zh:"錦帆香港國際物流有限公司"},
+  {en:"JJE TRADING LIMITED",zh:""},
+  {en:"JK Allied HK Limited",zh:""},
+  {en:"JNF HK Limited",zh:"香港集安福贸易有限公司"},
+  {en:"JOAQUINA LIMITED",zh:""},
+  {en:"Join In Technology Limited",zh:"香港俊億科技有限公司"},
+  {en:"JUNMEI Fashion Hong Kong Limited",zh:"君美時尚（香港）有限公司"},
+  {en:"Juqixiang Group Holding Co., Limited",zh:"聚其香集團控股有限公司"},
+  {en:"JV INTERNATIONAL EMIM HK LIMITED",zh:""},
+  {en:"KARVOX LIMITED",zh:""},
+  {en:"KAYMAN EXPRESS LIMITED",zh:""},
+  {en:"Ke Yuan HK Biotechnology Co., Limited",zh:"科源（香港）生物科技有限公司"},
+  {en:"Kowloon Cargo Express HK Limited",zh:""},
+  {en:"KRIS RS GLOBAL HK LIMITED",zh:""},
+  {en:"KUAI LIAN TRADING LIMITED",zh:""},
+  {en:"L&F International Co., Limited",zh:"利方國際有限公司"},
+  {en:"LAKHVEER AUTO PARTS & INDUSTRIAL PRODUCTS LIMITED",zh:""},
+  {en:"LAP MAN GROUP COMPANY LIMITED",zh:"立民集團有限公司"},
+  {en:"LAST FRIDAY FOODS & FURNITURES LIMITED",zh:""},
+  {en:"Lemda Import And Export Co., Limited",zh:""},
+  {en:"LFP LS LIMITED",zh:""},
+  {en:"Li Baoshun Hong Kong International Limited",zh:"利寶順香港國際有限公司"},
+  {en:"Lihua Global Trading Co., Limited",zh:"利華環球貿易有限公司"},
+  {en:"Lime light trading co limited",zh:""},
+  {en:"LIMRA BAGS LIMITED",zh:""},
+  {en:"Linkcore International Systems Limited",zh:"聯科國際系統有限公司"},
+  {en:"Linlin Technology Limited",zh:"林霖科技有限公司"},
+  {en:"LIPID INTERNATIONAL LIMITED",zh:""},
+  {en:"LITIAN INTERNATIONAL HONG KONG CO., LIMITED",zh:"利天（國際）香港有限公司"},
+  {en:"Little Fire Consultancy Company Limited",zh:"小火咨詢有限公司"},
+  {en:"LKK SERVICES HK LIMITED",zh:""},
+  {en:"LONG HARMONY HOLDING LIMITED",zh:"相合長和有限公司"},
+  {en:"LORDSHIPPER VESSEL PTE LIMITED",zh:""},
+  {en:"Lucky Clouds Technology Limited",zh:"祥雲科技有限公司"},
+  {en:"Lucky&Happy Holding co.,limited",zh:"幸福快樂股份有限公司"},
+  {en:"LUMINARY CROWN LIMITED",zh:""},
+  {en:"LUMISOQ HK LIMITED",zh:""},
+  {en:"LUXE LABEL MOMENTS LIMITED",zh:""},
+  {en:"M S GENERAL TRADING SOLUTION LIMITED",zh:""},
+  {en:"MARHABA COMPANY LIMITED",zh:""},
+  {en:"MARKY TRADING CO HK LIMITED",zh:""},
+  {en:"MASTERFUL PRODUCTS LIMITED",zh:""},
+  {en:"Mattermemory Asia Pacific Limited",zh:"物質記憶（亞太）有限公司"},
+  {en:"MAX LUCK ASIA INVESTMENT LIMITED",zh:"福盛亞太投資有限公司"},
+  {en:"MAX PRO TECH HONG KONG LIMITED",zh:""},
+  {en:"MAXF HOLDINGS HK LIMITED",zh:""},
+  {en:"MAXIE CO LIMITED",zh:""},
+  {en:"Maya HongKong Trading Company Limited",zh:"瑪雅（香港）貿易有限公司"},
+  {en:"Maya HongKong Trading Company Limited",zh:"瑪雅（香港）貿易有限公司"},
+  {en:"Mealinda Technology co., Limited",zh:"美林達技術有限公司"},
+  {en:"MEGA CHAMP TRADING LIMITED",zh:""},
+  {en:"MEI SHU YUAN INTERNATIONAL TRADE CO.,LIMITED",zh:"香港美姝媛國際商貿有限公司"},
+  {en:"MERCHANT WELLTECH LIMITED",zh:""},
+  {en:"Mersite International Limited",zh:"默賽德國際有限公司"},
+  {en:"MID-HUGE INTERNATIONAL LIMITED",zh:"中大國際有限公司"},
+  {en:"MIL HOR LIMITED",zh:""},
+  {en:"MINASIA TRADING CO., LIMITED",zh:"明亞貿易有限公司"},
+  {en:"Minglan Chemical Hongkong Corporation Limited",zh:""},
+  {en:"Miomio International Holding Co., Limited",zh:""},
+  {en:"MITA CO., LIMITED",zh:"美迖有限公司"},
+  {en:"MODERN EXTREME LIMITED",zh:""},
+  {en:"MOON LUCK HK LIMITED",zh:"滿發(香港)有限公司"},
+  {en:"MOONLIGHT TRADING LIMITED",zh:""},
+  {en:"Moonshot Media Limited",zh:""},
+  {en:"MOVE EZ LOGISTICS LIMITED",zh:""},
+  {en:"NEBULA STAR TRADING LIMITED",zh:""},
+  {en:"NEO LOGISTICS HK LIMITED",zh:""},
+  {en:"New World Trade Co., Limited",zh:"欣天地貿易有限公司"},
+  {en:"NICE GLOBAL TRIMS LIMITED",zh:""},
+  {en:"NIMBUS CLOUD TECHNOLOGY HK LIMITED",zh:""},
+  {en:"Ningbo Glory Hongkong Limited",zh:""},
+  {en:"NIPPORI IMPORTERS LIMITED",zh:"利寶來有限公司"},
+  {en:"NIVAR ELECTRONICS LIMITED",zh:""},
+  {en:"NOOR IMPORT AND EXPORT TRADING",zh:""},
+  {en:"NORTH WINGS TRADING LIMITED",zh:""},
+  {en:"Nova International Solutions Limited",zh:""},
+  {en:"NSK CORPORATION LIMITED",zh:"新櫻國際貿易有限公司"},
+  {en:"OCEAN EXPERT TRADING LIMITED",zh:"海傑貿易有限公司"},
+  {en:"Oceans Investment Co., Limited",zh:"沿海投資有限公司"},
+  {en:"Octant Trading Hongkong Limited",zh:"捌份貿易（香港）有限公司"},
+  {en:"OFFERING EDUCATION HONG KONG LIMITED",zh:"奧孚瑞教育(香港)有限公司"},
+  {en:"Omna international LIMITED",zh:""},
+  {en:"ONE BEYOND LIMITED",zh:""},
+  {en:"ON SITE WORLD LIMITED",zh:""},
+  {en:"OSSI COSMO LIMITED",zh:""},
+  {en:"OXY ELITED DESING COMPANY LIMITED",zh:"謳置精英設計有限公司"},
+  {en:"PAINAP NETWORK TECHNOLOGY HK LIMITED",zh:"派納普網絡科技香港有限公司"},
+  {en:"Passion Worldwide sourcing limited",zh:""},
+  {en:"PEARL AXIS SHIPPING HK LIMITED",zh:""},
+  {en:"PEGASUS TRADING GLOBAL HK LIMITED",zh:""},
+  {en:"Peng Cheng Jia Yue HK Limited",zh:"鵬城嘉月（香港）有限公司"},
+  {en:"PERFECT CHOICE TRADING LIMITED",zh:""},
+  {en:"PFERED PTE LIMITED",zh:""},
+  {en:"PGEJ INTERNATIONAL INDUSTRIES LIMITED",zh:"卓寶珈國際實業有限公司"},
+  {en:"PHOENIX GLOBAL CO.LIMITED",zh:""},
+  {en:"PIN QIN LIMITED",zh:""},
+  {en:"Pineapple Bakery Limited",zh:"鳳梨餅家有限公司"},
+  {en:"PLEASENT LIMITED",zh:"愉快有限公司"},
+  {en:"Precise trading LIMITED",zh:""},
+  {en:"Prime Living And Vitality Limited",zh:"香港生命綻放150有限公司"},
+  {en:"PRIMITIVE TRADING HK CO LIMITED",zh:""},
+  {en:"PROMED MEDICAL MATERIAL HONG KONG CO., LIMITED",zh:"香港英偉醫用材料有限公司"},
+  {en:"ProsperFly Holdings Limited",zh:"豐瑞福萊控股有限公司"},
+  {en:"ProsperFly International Limited",zh:"豐瑞福萊國際有限公司"},
+  {en:"PT TECHNOLOGIES LIMITED",zh:""},
+  {en:"PUTNO LIMITED",zh:""},
+  {en:"QS CONSTRUCTION TECHNOLOGY LIMITED",zh:"旗勝建設智能科技有限公司"},
+  {en:"QUANTRACT LIMITED",zh:""},
+  {en:"R A INVESTMENTS LIMITED",zh:""},
+  {en:"R K TRADERS HK LIMITED",zh:""},
+  {en:"RAFMOH GOLD HK LIMITED",zh:""},
+  {en:"RECKNON LIMITED",zh:""},
+  {en:"REVERBON LIMITED",zh:""},
+  {en:"RICH ABLE GROUP LIMITED",zh:"富騰集團有限公司"},
+  {en:"RIGHT ANGLE TRADING LIMITED",zh:""},
+  {en:"RIGHT ASIA HOLDINGS LIMITED",zh:"正亞集團有限公司"},
+  {en:"RIGHT PATH TRADING LIMITED",zh:""},
+  {en:"RIGHT PRODUCTS INTERNATIONAL LIMITED",zh:""},
+  {en:"RISE CONCEPTS LIMITED",zh:""},
+  {en:"R.P. IMPEX limited",zh:""},
+  {en:"RR DIAM HK LIMITED",zh:""},
+  {en:"RS EXPORTS ASIA PACIFIC LIMITED",zh:""},
+  {en:"RS OVERSEAS HK LIMITED",zh:""},
+  {en:"Ruichmedia Hong Kong Technology Co., Limited",zh:""},
+  {en:"Ryi Technology Co., Limited",zh:"如意科技有限公司"},
+  {en:"Ryse International Limited",zh:""},
+  {en:"S&S TEXWISE INTERNATIONAL LIMITED",zh:""},
+  {en:"SAG SOLUTIONS LIMITED",zh:""},
+  {en:"SAM FAR EAST LIMITED",zh:""},
+  {en:"Sanchi Hong Kong Limited",zh:"膳琦香港有限公司"},
+  {en:"SanShel International HK Limited,",zh:""},
+  {en:"SB RECYCLING & LOGISTICS CO LIMITED",zh:""},
+  {en:"SEMIFREDO GLOBAL TRADING HK LIMITED",zh:""},
+  {en:"SESAME INTERNATIONALTRADING CO LIMITED",zh:""},
+  {en:"SEVEN HEART INTERNATIONAL LIMITED",zh:""},
+  {en:"SFSS TECHNOLOGY LIMITED",zh:"順風順水科技有限公司"},
+  {en:"SHANG ZHUI LIMITED",zh:""},
+  {en:"SHANGHAI SHEN HONG H.K. LIMITED",zh:""},
+  {en:"SHELCIA INTERNATIONAL HK LIMITED",zh:""},
+  {en:"SHELCIA LOGISTICS HK LIMITED",zh:""},
+  {en:"Shenzhen Komon International Logistics Co LIMITED",zh:"深圳市可蒙國際物流有限公司"},
+  {en:"SHENZHEN LIPOWER ENERGY SHAREHOLDING CO., LIMITED",zh:"深圳市鋰動能源股份有限公司"},
+  {en:"SHENZHEN REALTIME M&C CO., LIMITED",zh:"深圳市銳泰測控有限公司"},
+  {en:"Shenzhen Weikai Network Technology Co., Limited",zh:"深圳唯楷網絡科技有限公司"},
+  {en:"SHRINE TRADING LIMITED",zh:""},
+  {en:"SIMSUN ENTERPRISE LIMITED",zh:""},
+  {en:"Sino European International Holdings Limited",zh:"中歐國際控股集團有限公司"},
+  {en:"SKAI BEAUTY AND HEALTH TECHNOLOGY LIMITED",zh:""},
+  {en:"SKANDAZ INTernational HOLDINGS Limited",zh:""},
+  {en:"SKILLON TRADE LIMITED",zh:""},
+  {en:"SKY ROUTE LOGISTICS HK LIMITED",zh:""},
+  {en:"Skyking Energy Limited",zh:""},
+  {en:"SKYVANE LIMITED",zh:""},
+  {en:"Sling Silver Limited",zh:"香港戈瀾銀新材料產業有限公司"},
+  {en:"SMART SOAR CO. LIMITED",zh:""},
+  {en:"SMARTFAST TRADE CO LIMITED 自己地址",zh:"速美特貿易公司"},
+  {en:"SOLID CO HK LIMITED",zh:""},
+  {en:"Southeast Electric Power Co., Limited",zh:"東南電力有限公司"},
+  {en:"SPRINT CARGO LOGISTICS LIMITED",zh:""},
+  {en:"SPRINT INTERNATIONAL LIMITED",zh:""},
+  {en:"SPRINT PRODUCTS TRADING LIMITED",zh:""},
+  {en:"STAMCORP INTERNATIONAL HONGKONG LIMITED",zh:""},
+  {en:"STAR LINKAGE TRADING LIMITED",zh:"星途貿易有限公司"},
+  {en:"STAR TRADE LINKS HK LIMITED",zh:""},
+  {en:"STARCHI SMART AUTO HK LIMITED",zh:"星馳智行（香港）有限公司"},
+  {en:"STARLUX TECH CO., LIMITED",zh:""},
+  {en:"STRONG ENERGY INDUSTRIAL LIMITED",zh:"致强實業有限公司"},
+  {en:"SU-RAJ INTERGOLD HK LIMITED",zh:""},
+  {en:"Sumhung HK Limited",zh:"森鴻實業有限公司"},
+  {en:"SURE SUCCESS TRADING LIMITED",zh:""},
+  {en:"SV TRADING LON LIMITED",zh:""},
+  {en:"SVJ LEE ASIA CORPORATE CONSULTANTS LIMITED",zh:""},
+  {en:"Swift Innovate Packaging Technologies Limited",zh:"速創未來包裝科技有限公司"},
+  {en:"SWIFTLINE LOGISTICS HK LIMITED",zh:""},
+  {en:"Sylar Trading Limited",zh:"賽雷貿易有限公司"},
+  {en:"TANGCHENG INTERNATIONAL HONG KONG LIMITED",zh:"湯成國際（香港）有限公司"},
+  {en:"Teda SmartLink Investment Holdings Co., Limited",zh:"泰達智聯投資控股有限公司"},
+  {en:"TIEKE GROUP HOLDING CO., LIMITED",zh:"鐵科集團控股有限公司"},
+  {en:"TIME AND VELI MOTORCYCLE CO., LIMITED",zh:"時間威利摩托車有限公司"},
+  {en:"TIMSPARK LIMITED",zh:""},
+  {en:"TOMORROW MAKERS HK LIMITED",zh:""},
+  {en:"TOMORROW MAKERS HOLIDAY LIMITED",zh:""},
+  {en:"Tongyun shoes co., Limited",zh:"桐韻鞋業有限公司"},
+  {en:"TOP ONE INTERNATIONAL LOGISTICS LIMITED",zh:""},
+  {en:"TRADE FUSION LIMITED",zh:""},
+  {en:"Trade Wings Logistics HK Limited",zh:""},
+  {en:"TRADING LINK HK LIMITED",zh:""},
+  {en:"TransPac Routes HK Limited",zh:""},
+  {en:"TRIDENT GLOBE LIMITED",zh:""},
+  {en:"Tripod International Trading Co., Limited",zh:"漢鼎（香港）國際貿易有限公司"},
+  {en:"Truemarket Trading Co Limited",zh:""},
+  {en:"TTLM TECHNOLOGY CO., LIMITED",zh:"通投拉滿科技有限公司"},
+  {en:"UK SCHOOLING HK LIMITED",zh:""},
+  {en:"UNION KING CORP LIMITED",zh:""},
+  {en:"Unitec Media Company Limited",zh:"優亦科技傳媒有限公司"},
+  {en:"UNITED WHOLESALES LIMITED",zh:""},
+  {en:"Universal Smart Soar Limited",zh:""},
+  {en:"Urania Family Limited Company Limited",zh:"優瑞家族有限公司"},
+  {en:"VALVAI LIMITED",zh:""},
+  {en:"VERTEX FREIGHT HK LIMITED",zh:""},
+  {en:"VIVIEW INTERNATIONAL CO., LIMITED",zh:"信瑞(香港)有限公司"},
+  {en:"VIVO VENTURES LIMITED",zh:""},
+  {en:"VROBAL ENERGY & RESOURCES PTE LIMITED",zh:""},
+  {en:"Wang Xuan International Limited",zh:"王萱國際有限公司"},
+  {en:"WANSI Technology Co., Limited",zh:"晚思科技有限公司"},
+  {en:"WATERFLY SPORTS TECHNOLOGY LIMITED",zh:""},
+  {en:"WAVES LOGISTICS INTL PTE LIMITED f/k/p/m TRADERS LIMITED",zh:""},
+  {en:"WEIJU TECHNOLOGY CO., LIMITED",zh:"未居科技有限公司"},
+  {en:"Well Allied International Limited",zh:"翔合國際有限公司"},
+  {en:"WELLDONE TRADING HK LIMITED",zh:""},
+  {en:"WHITE SHADE ENTERPRISES HK LIMITED",zh:""},
+  {en:"WHITESPACE CONSULTING LIMITED",zh:""},
+  {en:"WILDRHINO STUDIOS HK LIMITED",zh:""},
+  {en:"Winghope International Limited",zh:"永合國際有限公司"},
+  {en:"Winghope Technology Limited",zh:"永合科技有限公司"},
+  {en:"WISE SELECT INTL LIMITED",zh:""},
+  {en:"Wisetime Technology Limited",zh:"滙辰科技有限公司"},
+  {en:"Wontour Trading Limited",zh:"旺途貿易有限公司"},
+  {en:"Wood Source Trading Limited",zh:"沐源貿易有限公司"},
+  {en:"Woodson Technology Limited",zh:"沃達森科技有限公司"},
+  {en:"WORLD PRODUCTIONS LIMITED",zh:""},
+  {en:"WU HAN PON PON KANG HONG KONG LIMITED",zh:"武漢澎澎康（香港）有限公司"},
+  {en:"Wushang Import And Export Trading Hong Kong Limited",zh:"武商進出口貿易（香港）有限公司"},
+  {en:"Xi Le An Kang Co.,Limited",zh:""},
+  {en:"Xiangmei Trade Co., Limited",zh:"湘美貿易有限公司"},
+  {en:"XINYU TECH CO., LIMITED",zh:""},
+  {en:"Xpower Trading Company Limited",zh:"星寶進出口有限公司"},
+  {en:"Y&C Development Limited",zh:"言承發展有限公司"},
+  {en:"YUE MEI BEAUTY LIMITED",zh:"悅薇專業美容有限公司"},
+  {en:"Zenith Love Affinity Holdings Limited",zh:"臻愛福緣控股有限公司"},
+  {en:"ZenithMicro Co., Limited",zh:"至頂微電子科技有限公司"},
+  {en:"Zhikai Hong Kong International Limited",zh:"致楷香港國際有限公司"},
+  {en:"ZHOMGG Technology Co., Limited",zh:"中舸科技有限公司"},
+  {en:"Zhonggong International Technology College Co., Limited",zh:"中公教育國際科技學院有限公司"},
+  {en:"ZHONGHAI HONG KONG COMPANY LIMITED",zh:"中海（香港）有限公司"},
+  {en:"ZHONGTONG INVESTMENT CAPITAL COMPANY LIMITED",zh:"中通投資資本有限公司"},
+  {en:"ZHONGYU GLOBAL SHIPPING CO., LIMITED",zh:""},
+  {en:"Zibaoshun Hong Kong International Limited",zh:"梓寶順香港國際有限公司"},
+  {en:"",zh:"華君資產投資管理有限公司"}
+];
+
+
+// Filter out any blank objects (if any) to clean the list
+var cleanCompanies = [];
+for (var i = 0; i < companies.length; i++) {
+  if (companies[i] && (companies[i].en || companies[i].zh)) {
+    cleanCompanies.push(companies[i]);
+  }
+}
+
+// Automatically calculate the optimal number of pages and distribute elements evenly
+// so that all slides are full and there is no empty last slide.
+var PAGE_DURATION = 12000; // 12 seconds per page
+
+// We will fit the companies into exactly N pages, where each page has 25 or 26 items,
+// preventing an empty last page of only 7 items!
+var totalPages = Math.ceil(cleanCompanies.length / 26); 
+var pages = [];
+var remainingItems = cleanCompanies.length;
+var itemIndex = 0;
+
+for (var p = 0; p < totalPages; p++) {
+  var pagesLeft = totalPages - p;
+  var itemsForThisPage = Math.ceil(remainingItems / pagesLeft);
+  
+  var pageData = cleanCompanies.slice(itemIndex, itemIndex + itemsForThisPage);
+  pages.push(pageData);
+  
+  itemIndex += itemsForThisPage;
+  remainingItems -= itemsForThisPage;
+}
+
+var currentPage = 0;
+var colL = document.getElementById("col-l");
+var colM = document.getElementById("col-m");
+var colR = document.getElementById("col-r");
+
+function buildColHTML(data) {
+  var html = "";
+  for (var i = 0; i < data.length; i++) {
+    var c = data[i];
+    html += '<div class="co">' +
+            '<span class="co-en">' + c.en + '</span>' +
+            (c.zh ? '<span class="co-zh">' + c.zh + '</span>' : "") +
+            '</div>';
+  }
+  return html;
+}
+
+// Pre-render all pages to prevent memory leaks on Smart TVs
+for (var p = 0; p < totalPages; p++) {
+  var pageData = pages[p];
+  var colLSize = Math.ceil(pageData.length / 3);
+  var colMSize = Math.ceil((pageData.length - colLSize) / 2);
+  
+  var colLData = pageData.slice(0, colLSize);
+  var colMData = pageData.slice(colLSize, colLSize + colMSize);
+  var colRData = pageData.slice(colLSize + colMSize);
+  
+  var divL = document.createElement("div");
+  divL.className = "page-layer";
+  divL.innerHTML = buildColHTML(colLData);
+  colL.appendChild(divL);
+  
+  var divM = document.createElement("div");
+  divM.className = "page-layer";
+  divM.innerHTML = buildColHTML(colMData);
+  colM.appendChild(divM);
+  
+  var divR = document.createElement("div");
+  divR.className = "page-layer";
+  divR.innerHTML = buildColHTML(colRData);
+  colR.appendChild(divR);
+}
+
+function showPage(pageIndex) {
+  var layersL = colL.getElementsByClassName("page-layer");
+  var layersM = colM.getElementsByClassName("page-layer");
+  var layersR = colR.getElementsByClassName("page-layer");
+  
+  for (var i = 0; i < totalPages; i++) {
+    if (i === pageIndex) {
+      layersL[i].classList.add("active");
+      layersM[i].classList.add("active");
+      layersR[i].classList.add("active");
+    } else {
+      layersL[i].classList.remove("active");
+      layersM[i].classList.remove("active");
+      layersR[i].classList.remove("active");
+    }
+  }
+}
+
+function nextPage() {
+  currentPage = (currentPage + 1) % totalPages;
+  showPage(currentPage);
+}
+
+// Initial render
+showPage(0);
+
+// Rotate page every X seconds
+var rotationInterval = setInterval(nextPage, PAGE_DURATION);
+
+function tick() {
+  var now = new Date();
+  var timeStr = now.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true });
+  var parts = timeStr.split(" ");
+  document.getElementById("clock-time").textContent = parts[0];
+  document.getElementById("clock-ampm").textContent = parts[1];
+}
+setInterval(tick, 1000);
+tick();
+
+// Glow-up highlight loop removed as requested to keep layout completely static and elegant
+</script>
+</body>
+</html>
